@@ -1,0 +1,22 @@
+MODULE BYD_CAR
+
+    PROC Prg230()
+        !Gun1 ServicePos
+        Gun1ToService;
+        MoveAbsJ pHome\NoEOffs,vmax,fine,tGun1;
+        PulseDO\PLength:=2, Ser_Finish;
+    ENDPROC
+
+    PROC Prg210()
+        !Gun1 TipDress 
+        MoveGun1TipDress;
+        MoveAbsJ pHome\NoEOffs,vmax,fine,tGun1;
+        PulseDO\PLength:=2, Ser_Finish;
+    ENDPROC
+
+    PROC Prg220()
+        !Gun1 TipChange
+        MoveGun1TipChg;
+        MoveAbsJ pHome\NoEOffs,vmax,fine,tGun1;
+        PulseDO\PLength:=2, Ser_Finish;
+    ENDPROC
